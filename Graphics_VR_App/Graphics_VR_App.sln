@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics_VR_App", "Assembly-CSharp.csproj", "{2C0C9FF2-8E9E-D3C0-7DF4-8261ABA4A916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics_VR_App", "Assembly-CSharp-Editor.csproj", "{758FFB96-D3FD-4C1A-5D53-EC7BE1A6E2E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C0C9FF2-8E9E-D3C0-7DF4-8261ABA4A916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0C9FF2-8E9E-D3C0-7DF4-8261ABA4A916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0C9FF2-8E9E-D3C0-7DF4-8261ABA4A916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0C9FF2-8E9E-D3C0-7DF4-8261ABA4A916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758FFB96-D3FD-4C1A-5D53-EC7BE1A6E2E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758FFB96-D3FD-4C1A-5D53-EC7BE1A6E2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758FFB96-D3FD-4C1A-5D53-EC7BE1A6E2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758FFB96-D3FD-4C1A-5D53-EC7BE1A6E2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
