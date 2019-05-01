@@ -1,94 +1,67 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
 <head>
-    <style>
-        div.padded {
-            padding-top: 0px;
-            padding-right: 100px;
-            padding-bottom: 0.25in;
-            padding-left: 100px;
-        }
-    </style>
-    <title>CS 184 Final Project Proposal | CS 184</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Final Project</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 </head>
 
+
 <body>
-    <br />
-    <h1 align="middle">CS 184 Final Project: VR Environment Renderer App</h1>
-    <h3 align="middle">Alan Nguyen, Jared Shao, Vincent Tantra</h2>
 
-    <div class="padded">]
-        <h2 align="middle">Project Summary</h2>
-        <p> Virtual reality is becoming a more prominent technology in modern society. For our final project, 
-            we would like to attempt to explore this field by implementing the rendering and lighting techniques 
-            that have been taught in class in a 3D explorable space. We aim to implement this on an accessible tool, 
-            our smartphone, and possibly introduce interactivity through the Google Cardboard API.
-        </p>
-        
-        <h2 align="middle">Problem Description</h2>
-        So far, the concepts we've learned in class have been applied on 3D objects, but on a static 2D screen. We 
-        are wondering how that changes if we render whole environments in the virtual space, as well as have our eyes 
-        as the camera that views the scene. This inherently involves some complexity, as our eyes are mobile and thus, the 
-        rendered scene changes in some ways during the viewing process. However, since VR is becoming an increasingly 
-        popular technology in the tech space, we'd like to try our hand at porting our learning to this technology. 
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
+<h1 align="middle">Milestone Report</h1>
+<h2 align="middle">Alan Nguyen, Jared Shao, Vincent Tantra</h2>
 
-        <h2 align="middle">Goals and Deliverables</h2>
-        Our ultimate goal is to produce a VR app for iOS/Android devices that is compatible with the Google Cardboard system. 
-        Our app will take a scene (we have not decided yet whether the scene will be imported as an image of a real world environment, 
-        or a rendered, polygonal mesh) and apply realistic graphics effects (mainly lighting) for viewing by an audience. Our deliverables 
-        include the creation of the scene to be rendered, a basic app that allows said scene to be rendered for static viewing on the phone, and 
-        an app that allows said scene to be viewed in full 3D VR on the phone. We also aim to provide interactive features, by allowing the camera 
-        to teleport around the scene, as our final expected deliverable. Additional features may be implemented as time permits, but due to the 
-        radical nature of this project to us (none of us have experimented with VR or any of its related APIs/CDKs before), we expect 
-        to have slightly more complications and debugging issues than usual.<br>
-        As an addition, we will probably discover additional SDKs/APIs while in the research phase of our project. Thus, we may switch the used 
-        SDK in order to improve performance or implement new features. As of submission of this proposal, our group is planning to research the 
-        Google VR suite (Daydream, Cardboard) and the Unity3D XR tutorial program. We may include more as time goes on.
+<h2 align="middle">Overview</h2>
+<p>As a refresher, our final project is exploring environment rendering in the VR space, using primarily Unity for development and Google Cardboard API for porting our VR application into an iOS phone.</p>
 
-        <h2 align="middle">Schedule</h2>
-        <h4>WEEK 1: RESEARCH</h4>
-        <p>This week will be dedicated to becoming familiar with the needed packages and APIs. For this, 
-            we will brush up on the rendering algorithms needed, the Unity workspace, and the Google Cardboard SDK 
-            used in Unity. We will also look at videos that describe implementing VR scenes in Unity and Google 
-            Cardboard.
-        </p>
-        <h4>WEEK 2: IMPLEMENT</h4>
-        <p>The bulk of implementing our project is planned to happen during this week. Goals include creating 
-            the scene, programming the bulk of the code that allows a basic rendering of our image, and porting 
-            a rudimentary app to the phone for testing. We aim to have a simple app that at least allows a user 
-            to be immersed in a simply rendered environment which may be lit.
-        </p>
-        <h4>WEEK 3: DEBUG</h4>
-        <p>We allow a week in our schedule to be used for debugging the previous code and finishing up any implementation 
-            details that were left unfinished. This includes finishing the targeted lighting algorithms, improving performance 
-            of the application, and including rudimentary interactivity (using the Google Cardboard button to allow scene changes, 
-            as an example). We expect things to be rough as we are working with an API that is new to all of us, so 
-            this week will also be used to do more research in case those unfamiliarities cause issues in our project.
-        </p>
-        <h4>WEEK 4: EXTEND</h4>
-        <p>This final week serves as a buffer to make sure, at the very least, we have an app that renders virtual environments with 
-            the realistic rendering algorithms from class. However, assuming the past 3 weeks are followed in full, this week 
-            will also be dedicated to extending our app to include more functional and enjoyable features. We plan on expanding 
-            the working environment that we render (possibly to include animated materials), as well as including interactive features 
-            such as further increasing the use of Google Cardboard's button. In the case that we go the complete virtual route, we are thinking 
-            of implementing a "tour on rails" through the environment. In the case that we instead render a 3D image of a photographed 
-            environment, we will instead explore implementing mixed reality interactions (provided by Unity XR tutorials).
-        </p>
+<h2 align="middle">Accomplishments</h2>
 
-        <h2 align="middle">Resources</h2>
-        <p>Computing platforms/technologies: Unity3D, Visual Studio Code, Google Cardboard CDK<br>
-            Hardware: iOS/Android device, Google Cardboard CDK <br>
-            
-            Resources (as of now): <br>
-            <a href="https://vr.google.com/cardboard/developers/">https://vr.google.com/cardboard/developers/</a><br>
-            <a href="https://unity3d.com/learn/tutorials/s/xr">https://unity3d.com/learn/tutorials/s/xr</a><br>
-            <a href="https://vr.google.com/daydream/developers/">https://vr.google.com/daydream/developers/</a><br>
+<p>Due to our lack of experience in VR, we both faced a preliminary problem of actually learning how to use Unity and the Google Cardboard API. What this meant was that we've dove through myriads of documentation and tutorials for both platforms. After being able to port an online demo on Unity into one of our phones through the Google Cardboard API, we are now comfortable enough to navigate the Unity space and begin developing the inner workings of this project. For now, we have a simple scene with various features implemented, including a camera, a scene, and some objects/shapes. </p>
+    
+Another problem we are currently facing with this project revolves around optimization. Since we are projecting our VR environment into mobile phones, we ultimately have to make some cutbacks. For instance, we have to implement "baked" lighting for global illumination as opposed to <a href="https://unity3d.com/learn/tutorials/topics/graphics/choosing-lighting-technique"><b>Precomputed Realtime GL Lighting</b></a> in order to accomodate for mobile hardware. To summarize the presented link, we have a tradeoff of the ability to render lights overtime for increased performance and less memory usage. More research is currently underway for being able to optimize our project for mobile phones.</p>
 
-        </p>
-    </div>
+<h2 align="middle">Schedule</h2>
+
+<p>To map out our progress, we have the current workplan on a week-to-week basis, starting from this week. This schedule is similar to our project proposal schedule; our team is a bit aligned with the original schedule. </p>
+
+<ol>
+    <li>Play around with more of Unity. Construct the main scene and begin implementing global illumination code. Optimistically, be complete with rendering code and be able to successfully port this draft to Google Cardboard.</li>
+    <li>Debug and optimize all code drafted from the previous week. Finish up any remaining implementation details, with some specifics including: scene changes, targeted lighting algorithms, performance. Have this draft at the minimum ready for poster session.</li>
+    <li>Extend this app to include more functional and enjoyable features, not limited to Unity XR and more interaction with Google Cardboard. Details regarding project extension are contingent to what we've accomplished and how much time is left before the final deadline.</li>
+</ol>
+
+<h2 align="middle">Deliverables</h2>
+
+
+<p>Slides are available <a href="https://docs.google.com/presentation/d/15fAkANoiNmEjRxtkEPtDtuDGPKUDd_kPsqVBxj-IQnQ/edit?usp=sharing">here</a>.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aoFfEPe5dlY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- <div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/part5/mirror.png" align="middle" width="400px"/>
+      </td>
+    </tr>
+  </table>
+</div> -->
+
 </body>
-
 </html>
