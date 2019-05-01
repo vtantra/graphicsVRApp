@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Cloth Simulation</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
+<h1 align="middle">Milestone Report</h1>
+<h2 align="middle">Alan Nguyen, Jared Shao, Vincent Tantra</h2>
+
+<h2 align="middle">Overview</h2>
+<p>As a refresher, our final project is exploring environment rendering in the VR space, using primarily Unity for development and Google Cardboard API for porting our VR application into an iOS phone.</p>
+
+<h2 align="middle">Accomplishments</h2>
+
+<p>Due to our lack of experience in VR, we both faced a preliminary problem of actually learning how to use Unity and the Google Cardboard API. What this meant was that we've dove through myriads of documentation and tutorials for both platforms. After being able to port an online demo on Unity into one of our phones through the Google Cardboard API, we are now comfortable enough to navigate the Unity space and begin developing the inner workings of this project. </p>
+    
+Another problem we are currently facing with this project revolves around optimization. Since we are projecting our VR environment into mobile phones, we ultimately have to make some cutbacks. For instance, we have to implement "baked" lighting for global illumination as opposed to <a href="https://unity3d.com/learn/tutorials/topics/graphics/choosing-lighting-technique"><b>Precomputed Realtime GL Lighting</b></a> in order to accomodate for mobile hardware. To summarize the presented link, we have a tradeoff of the ability to render lights overtime for increased performance and less memory usage. More research is currently underway for being able to optimize our project for mobile phones.</p>
+
+<h2 align="middle">Schedule</h2>
+
+<p>To map out our progress, we have the current workplan on a week-to-week basis, starting from this week. This schedule is similar to our project proposal schedule; our team is a bit aligned with the original schedule. </p>
+
+<ol>
+    <li>Play around with more of Unity. Construct the main scene and begin implementing global illumination code. Optimistically, be complete with rendering code and be able to successfully port this draft to Google Cardboard.</li>
+    <li>Debug and optimize all code drafted from the previous week. Finish up any remaining implementation details, with some specifics including: scene changes, targeted lighting algorithms, performance. Have this draft at the minimum ready for poster session.</li>
+    <li>Extend this app to include more functional and enjoyable features, not limited to Unity XR and more interaction with Google Cardboard. Details regarding project extension are contingent to what we've accomplished and how much time is left before the final deadline.</li>
+</ol>
+
+<h2 align="middle">Deliverables</h2>
+
+
+
+<!-- <div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/part5/mirror.png" align="middle" width="400px"/>
+      </td>
+    </tr>
+  </table>
+</div> -->
+
+</body>
+</html>
