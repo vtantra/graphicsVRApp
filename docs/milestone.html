@@ -24,17 +24,43 @@
 <body>
 
 <h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
-<h1 align="middle">Milestone Report</h1>
+<h1 align="middle">VR Environments/Lighting</h1>
 <h2 align="middle">Alan Nguyen, Jared Shao, Vincent Tantra</h2>
 
-<h2 align="middle">Overview</h2>
-<p>As a refresher, our final project is exploring environment rendering in the VR space, using primarily Unity for development and Google Cardboard API for porting our VR application into an iOS phone.</p>
+<h2 align="middle">Abstract</h2>
+<p>This project is an exploration of lighting and environment rendering in the mobile VR space - particularly through the lens of a first person point of view. The player walks around in an abandoned town at night only carrying a flashlight. Various lighting topics, such as point and spot lighting, directional light, global illumination, and light maps are especially explored. Technologies used were: Unity, iOS, and Google SDK. </p>
 
-<h2 align="middle">Accomplishments</h2>
+<h2 align="middle">Approach</h2>
 
-<p>Due to our lack of experience in VR, we both faced a preliminary problem of actually learning how to use Unity and the Google Cardboard API. What this meant was that we've dove through myriads of documentation and tutorials for both platforms. After being able to port an online demo on Unity into one of our phones through the Google Cardboard API, we are now comfortable enough to navigate the Unity space and begin developing the inner workings of this project. For now, we have a simple scene with various features implemented, including a camera, a scene, and some objects/shapes. </p>
+<p>Our approach to this project mainly concerned terrain building, lighting implementation, mobile optimization, and extraneous features. First, we researched ways to optimize for the mobile VR space; this included the main focal point: baked lighting. Due to mobile devices' limited computational power, we were forced to implement <a href="https://docs.unity3d.com/Manual/LightMode-Baked.html">Baked Lighting</a> for most of our objects (if not all).</p>
+
+<p>The first step to realizing this project was designing the world in; this involved importing multiple assets and constructing some sort of MVP (minimal viable product) for the terrain. </p>
+
+<p>Next, we constructed multiple objects with dif</p>
+
+<p>After implementing the core features of a VR project: a scene with terrain, objects, and a camera view, it was time to implement extraneous features. The first feature we tackled was interactivity. We wanted the player to immerse themselves in the VR space, so we implemented a variation of <a href="https://www.youtube.com/watch?v=kBTn2pGwZUk">look walk</a>. This simply allowed the player to navigate through the area by looking downwards. To further elaborate on this algorithm, we read the camera view and calculate the player's movement. The view angle is also read and as a result, multiple transforms are calculated on the player's position; this is what makes the player move in the first place! We lastly had to convert these computation to Euler angles (rather than the default Quaternion).</p>
     
-Another problem we are currently facing with this project revolves around optimization. Since we are projecting our VR environment into mobile phones, we ultimately have to make some cutbacks. For instance, we have to implement "baked" lighting for global illumination as opposed to <a href="https://unity3d.com/learn/tutorials/topics/graphics/choosing-lighting-technique"><b>Precomputed Realtime GL Lighting</b></a> in order to accomodate for mobile hardware. To summarize the presented link, we have a tradeoff of the ability to render lights overtime for increased performance and less memory usage. More research is currently underway for being able to optimize our project for mobile phones.</p>
+<p>We also constructed a toggle on-off flashlight that allowed the player to properly see around the map, as well as the interesting lighting features!</p>
+
+<p></p>
+
+
+<h2 align="middle">Bugs and Bumps</h2>
+
+<p>Upon implementing this problem, we faced <i>significant</i> roadblocks to our completion. Here are some of the following:</p>
+
+<ol>
+    <li><p><b>Compatibility Issues</b>: The latest Unity version (20191.2.f1) is actually incompatible with mobile VR pertaining to iOS and the Google Cardboard SDK. To further elaborate, rendering a VR project on any iOS device will result in an inverted display regardless of orientation. VR projects are displayed strictly as landscape left when ported through Google Cardboard, but the latest Unity version strictly sticks to a landscape right orientation, regardless of user input and scripting configuration.</p>
+    
+        <p>We had to thus downgrade our Unity version to a more stable 2018 version (20183.14f1) in order to solve this issue. However, we only reached this conclusion after countless hours of surfing through Google, GitHub, and StackOverflow. There weren't many viable solutions nor were there similar problems to begin with, given the state and popularity of mobile VR. </p></li>
+    <li><p><b>iOS Development</b>: iOS development is considered to many (including us) a huge hassle; we had to install XCode to simply render our projects on our mobile devices. This also meant that we would have to use a package dependency platform named <a href="https://github.com/CocoaPods/CocoaPods"><b>CocoaPods</b></a>. Thus, we had at least 1-2 more layers of possible bugs we had to worry about. Examples include Unity by default building and running the wrong XCode files (.xcproj instead of .xcworkspace). </p></li>
+</ol>
+
+<p>It suffices to say that the Google SDK lacks a lot of support for iOS devices, compared to its Android counterpart. Most of the problems we encountered would have been solved if it we had access to an Android device. Furthermore, our project would have been more "realized" if we were familiar with VR to begin with; we were all beginners and a bit unfamiliar with Unity (especially mobile rendering). We thus had to commit to a week's worth of research and documentation sifting.</p>
+
+<h2 align="middle">Results</h2>
+
+<!-- insert video here -->
 
 <h2 align="middle">Schedule</h2>
 
